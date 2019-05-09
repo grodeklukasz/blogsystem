@@ -1,0 +1,40 @@
+{# templates/blog/list.html.twig #}
+
+{% extends 'layout.html.twig' %}
+
+
+{% block body %}
+    <div class='container'>
+        <div class="row">
+            <div class="col-md-12">
+                <h1>index</h1>
+            </div>
+        </div>
+    </div>
+ 
+    {% for blog in blogs %}
+    
+    <div class="container">
+        <div class="card border-secondary mb-3" style="max-width: 60rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h4 class="card-title">{{ blog.title }}</h4>
+                <p class="card-text">
+                
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+
+                    <a href="{{ path('blog_show', {'slug': blog.id}) }}">
+                    more
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    <div class="container">
+        <textarea id='fulledit'>
+        </textarea>
+    </div>
+    
+{% endblock %}

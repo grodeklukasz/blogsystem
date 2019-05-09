@@ -1,0 +1,13 @@
+{# templates/Lucky/number.html.twig #}
+
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+    Number
+{% endblock %}
+
+{% block body %}
+    {%  for entry in entries %}
+        <h2>{{ entry|upper }}</h2>
+    {% endfor %}
+{% endblock %}

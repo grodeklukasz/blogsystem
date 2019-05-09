@@ -1,0 +1,31 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Hello TaskController!{% endblock %}
+
+{% block body %}
+<div class="container">
+    <ul class="nav nav-pills">
+    <li class="nav-item">
+        <a class="nav-link" href="#">Active</a>
+    </li>
+    
+    <li class="nav-item">
+        <a class="nav-link" href="{{ path('newTask')}}">new Task</a>
+    </li>
+
+    </ul>
+</div>
+
+<div class="example-wrapper">
+    <div class="example-wrapper">
+        {% for task in tasks %}
+            <p>
+                 {{ task.task }}
+                 
+            </p>
+        {% endfor %}        
+   </div>
+</div>
+
+
+{% endblock %}
