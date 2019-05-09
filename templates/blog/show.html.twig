@@ -2,12 +2,12 @@
 
 {% block body %}
     <div class='container'>
-        <p>
+        <h2>
         {{ blog.title }}
-        </p>
-        <p>
-        {{ blog.description }}
-        </p>
+        </h3>
+        
+        {{ blog.description | raw }}
+        
     </div>
     <div class="container">
         <a href="{{ path('blog_list') }}">back</a>

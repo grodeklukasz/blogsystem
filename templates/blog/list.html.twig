@@ -21,11 +21,12 @@
                 <h4 class="card-title">{{ blog.title }}</h4>
                 <p class="card-text">
                 
-                    {{ blog.description }}
-
-                    <a href="{{ path('blog_show', {'slug': blog.id}) }}">
-                    more
-                    </a>
+                    {{ blog.description | raw}}
+                    <p>
+                        <a href="{{ path('blog_show', {'slug': blog.id}) }}">
+                        more
+                        </a>
+                    </p>
                 </p>
             </div>
         </div>
