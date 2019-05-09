@@ -21,7 +21,7 @@
                 <h4 class="card-title">{{ blog.title }}</h4>
                 <p class="card-text">
                 
-                Some quick example text to build on the card title and make up the bulk of the card's content.
+                    {{ blog.description }}
 
                     <a href="{{ path('blog_show', {'slug': blog.id}) }}">
                     more
@@ -32,9 +32,5 @@
     </div>
     {% endfor %}
 
-    <div class="container">
-        <textarea id='fulledit'>
-        </textarea>
-    </div>
-    
+
 {% endblock %}
