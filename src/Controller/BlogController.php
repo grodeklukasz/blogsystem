@@ -26,6 +26,7 @@ class BlogController extends AbstractController{
 
 
     /**
+     * for example how save object to the database
      * @Route("/newblog", name="blog")
      */
 
@@ -33,15 +34,18 @@ class BlogController extends AbstractController{
 
         $entityManager = $this->getDoctrine()->getManager();
 
-        $blog = new Blog();
-        $blog->setTitle('R6_Blog');
-        $blog->setDescription('This is blog about R6');
+        //$blog = new Blog();
+        //$blog->setTitle('R6_Blog');
+        //$blog->setDescription('This is blog about R6');
 
-        $entityManager->persist($blog);
+        //$entityManager->persist($blog);
 
-        $entityManager->flush();
+        //$entityManager->flush();
 
-        return new Response('Saved new Blog with id:'.$blog->getId());
+        //return new Response('Saved new Blog with id:'.$blog->getId());
+
+        return new Response('Saved new Blog with id:');
+        
 
 
      }
